@@ -1,0 +1,43 @@
+<!-- <div class="slide-container">
+  
+    <div class="wrapper"> -->
+ <div fxLayout="row" fxLayoutAlign="center center" style="height:100%; width:100%;">
+        <div *ngIf="cards[indexValue].id == indexValue + 1" class="clash-card barbarian animated" [ngClass]="cards[indexValue].classes" >
+                <div class="clash-card__image clash-card__image--barbarian">
+                    <div style="width:100%; height:100%;" fxLayout="row" fxLayoutAlign="center center">
+                        <section>
+                                <fa-icon [icon]="cards[indexValue].icon" size="10x" [styles]="{'stroke': 'white', 'color': 'white'}"></fa-icon>
+                        </section>
+                    </div>
+                            
+                </div>
+                <!-- <div class="clash-card__level clash-card__level--barbarian">Level 4</div> -->
+                <div class="clash-card__unit-name">{{cards[indexValue].title}}</div>
+                <div class="clash-card__unit-description">
+                {{cards[indexValue].descrition}}
+                </div>
+                <button (click)="nextSlide()" mat-fab color="primary"><mat-icon>send</mat-icon></button>
+                <!-- <button mat-icon-button color="primary" aria-label="Example icon-button with a heart icon">
+                  <mat-icon>send</mat-icon>
+                </button> -->
+                <div class="clash-card__unit-stats clash-card__unit-stats--barbarian clearfix">
+                  <div class="one-third">
+                    <div class="stat">20<sup>S</sup></div>
+                    <div class="stat-value">Training</div>
+                  </div>
+          
+                  <div class="one-third">
+                    <div class="stat">16</div>
+                    <div class="stat-value">Speed</div>
+                  </div>
+          
+                  <div class="one-third no-border">
+                    <div class="stat">150</div>
+                    <div class="stat-value">Cost</div>
+                  </div>
+          
+                </div>
+          
+              </div> <!-- end clash-card barbarian-->
+            
+</div>
